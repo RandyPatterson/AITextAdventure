@@ -2,7 +2,7 @@
 
 A console-based text adventure game powered by AI, built as a showcase of the **Microsoft Agent Framework (MAF)** and the .NET AI ecosystem.
 
-![.NET 8](https://img.shields.io/badge/.NET-8.0-purple)
+![.NET 10](https://img.shields.io/badge/.NET-8.0-purple)
 ![Microsoft Agent Framework](https://img.shields.io/badge/Microsoft%20Agent%20Framework-1.1.0-blue)
 
 ## Overview
@@ -31,7 +31,7 @@ This project demonstrates key capabilities of the [Microsoft Agent Framework](ht
 
 ## Prerequisites
 
-- [.NET 8 SDK](https://dotnet.microsoft.com/download/dotnet/8.0)
+- [.NET 10 SDK](https://dotnet.microsoft.com/download/dotnet/8.0)
 - An **Azure OpenAI** resource with a deployed chat model (e.g., `gpt-4`)
 
 ## Getting Started
