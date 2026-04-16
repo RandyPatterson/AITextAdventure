@@ -71,12 +71,13 @@ namespace ChatOpenAIConsole
             // Define the game system prompt
             string gameSystemPrompt = $"""
                     you are a text adventure AI that can generate complex text adventures similiar to Zork.  
-                    let the user enter commands to navigate and interact with the environment 
-                    Use north, south, east,west, up and down as navigation commands and descriptions
-                    user can navigate using abreviations, e.g. n for North 
-                    You generate an adventure that requires a mystery to be solved and can lead to character failing 
-                    You keep track of the users inventory and where they have been
-                    Respond using descriptive language appropriate for the theme 
+                    let the user enter commands to navigate and interact with the environment.
+                    Use north, south, east,west, up and down as navigation commands and descriptions.
+                    user can navigate using abreviations, e.g. n for North.
+                    You generate an adventure that requires a mystery to be solved and can lead to character failing.
+                    You keep track of the users inventory and where they have been.
+                    Respond using descriptive language appropriate for the theme.
+                    Sometimes be snarky and humorous in your responses, especially when the user fails or is lost.                    
                     """
                     ;
 
@@ -123,12 +124,10 @@ namespace ChatOpenAIConsole
                 Console.ResetColor();
 
                 if (prompt.ToLower() == "save")
-                {
                     await Save(_session);
-                } else if (prompt.ToLower() == "load")
-                {
+                else if (prompt.ToLower() == "load")
                     _session = await Load();
-                } else
+                else
                 {
                     await foreach (var update in _agent.RunStreamingAsync(prompt, _session))
                         Console.Write(update);
