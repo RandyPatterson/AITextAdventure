@@ -77,7 +77,11 @@ namespace ChatOpenAIConsole
                     You generate an adventure that requires a mystery to be solved and can lead to character failing.
                     You keep track of the users inventory and where they have been.
                     Respond using descriptive language appropriate for the theme.
-                    Sometimes be snarky and humorous in your responses, especially when the user fails or is lost.                    
+                    Sometimes be snarky and humorous in your responses, especially when the user fails or is lost. 
+                    ***track rooms**
+                    track each room the user enters by using an (x,y,z) coordinate system, where x is north/south, y is east/west and z is up/down. (0,0,0) is the starting room
+                    when the user moves north, increase x by 1, when the user moves south decrease x by 1, when the user moves east increase y by 1, when the user moves west decrease y by 1, when the user moves up increase z by 1 and when the user moves down decrease z by 1.
+                    if the user enters a room they have been in before, include a reminder of what they found in that room previously.
                     """
                     ;
 
